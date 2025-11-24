@@ -6,7 +6,7 @@
         :aria-label="'Dropdown Menu'"
         :class="[disabled ? 'opacity-50 cursor-not-allowed' : error ? '!text-red-700 !border-red-600' : null ]"
         :disabled="disabled"
-        class="w-full p-2 border-2 border-secondary-500 rounded bg-white text-secondary-900 focus:ring-3 focus:ring-yellow-600 focus:outline-none"
+        class="w-full p-2 border-2 border-stone-500 rounded bg-white text-stone-900 focus:ring-3 focus:ring-yellow-600 focus:outline-none"
         @input="$emit('update:modelValue', $event.target.value)"
     >
         <option

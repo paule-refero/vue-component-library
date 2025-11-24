@@ -3,7 +3,7 @@
         :to="to"
         :title="title"
         exact-path
-        class="text-blue-700 dark:text-gray-100 hover:text-blue-800 dark:hover:text-gray-300 focus:text-blue-800 dark:focus:text-gray-400 hover:underline focus:underline"
+        class="text-blue-700 dark:text-stone-100 hover:text-blue-800 dark:hover:text-stone-300 focus:text-blue-800 dark:focus:text-stone-400 hover:underline focus:underline"
     >
         <slot />
     </router-link>

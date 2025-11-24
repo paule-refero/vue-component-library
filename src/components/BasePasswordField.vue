@@ -8,12 +8,12 @@
             :placeholder="placeholder"
             :value="modelValue"
             :type="revealPassword ? 'text' : 'password'"
-            class="w-full px-3 py-2.5 border-2 border-secondary-500 leading-6 rounded bg-white text-secondary-900 focus:ring-3 focus:ring-yellow-600 focus:outline-none"
+            class="w-full px-3 py-2.5 border-2 border-stone-500 leading-6 rounded bg-white text-stone-900 focus:ring-3 focus:ring-yellow-600 focus:outline-none"
             :class="{'!text-red-700 !border-danger':error}"
             @input="$emit('update:modelValue', $event.target.value)"
         >
         <button
-            class="absolute right-4.5 cursor-pointer text-secondary-600 text-center w-5"
+            class="absolute right-4.5 cursor-pointer text-stone-600 text-center w-5"
             data-qa="password-reveal-button"
             title="Toggle Password Reveal"
             type="button"

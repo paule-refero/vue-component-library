@@ -8,10 +8,12 @@ import {
     faCaretDown,
     faGear,
     faXmark,
-    faAngleDown
+    faAngleDown,
+    faEye,
+    faEyeSlash
 } from '@fortawesome/free-solid-svg-icons';
 
 
 library.add(
-    faCaretDown, faGear, faXmark, faAngleDown
+    faCaretDown, faGear, faXmark, faAngleDown, faEye, faEyeSlash
 );

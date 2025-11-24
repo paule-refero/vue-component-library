@@ -29,7 +29,7 @@
         <SlideDownUp v-bind="finalOptions.transitionProps">
             <div
                 v-if="dropdownOpen"
-                class="dropdown-items ring-1 ring-secondary-200 absolute right-0 p-2 rounded shadow-md z-[1] w-48 min-w-full"
+                class="dropdown-items ring-1 ring-stone-200 absolute right-0 p-2 rounded shadow-md z-[1] w-48 min-w-full"
                 :class="[finalOptions.dropdownStyles]"
             >
                 <slot

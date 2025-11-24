@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col shadow rounded-lg overflow-hidden">
+    <div class="flex flex-col border border-stone-300 shadow rounded-lg overflow-hidden">
         <div
             v-if="hasHeaderSlot"
             class="flex shrink"

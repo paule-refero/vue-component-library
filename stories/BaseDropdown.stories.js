@@ -1,5 +1,5 @@
 import BaseDropdown from "../src/components/BaseDropdown.vue";
-import { within } from "storybook/test";
+import { within, userEvent } from "storybook/test";
 
 export default {
     title: "Components/BaseDropdown",
@@ -22,7 +22,7 @@ const createSpy = () => {
 export const Default = {
     args: {
         triggerText: "Options",
-        triggerIcon: "fa-caret-down",
+        triggerIcon: "fa-angle-down",
     },
     render: (args) => ({
         components: { BaseDropdown },
@@ -38,7 +38,7 @@ export const Default = {
       </BaseDropdown>
     `,
     }),
-    play: async ({ canvasElement, userEvent }) => {
+    play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
         // find the trigger by its accessible name
@@ -89,7 +89,7 @@ export const CustomTrigger = {
       </BaseDropdown>
     `,
     }),
-    play: async ({ canvasElement, userEvent }) => {
+    play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
         const trigger = canvas.getByRole("button", { name: /Custom Trigger/i });
 
@@ -122,7 +122,7 @@ export const OnClosePropCallback = (() => {
                 </BaseDropdown>
             `,
         }),
-        play: async ({ canvasElement, args, userEvent }) => {
+        play: async ({ canvasElement, args }) => {
             const canvas = within(canvasElement);
             const trigger = canvas.getByRole("button", { name: /Prop Callback/i });
 

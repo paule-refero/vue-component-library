@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-col w-full mb-3 md:mb-4">
         <label
-            class="block mb-2 font-sans dark:text-secondary-200 text-sm md:text-base"
-            :class="error ? 'text-red-600' : 'text-secondary-900'"
+            class="block mb-2 font-sans dark:text-stone-200 text-sm md:text-base"
+            :class="error ? 'text-red-600' : 'text-stone-900'"
             :for="forLabel"
         >
             {{ label }}
