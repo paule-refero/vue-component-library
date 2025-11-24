@@ -1,5 +1,5 @@
 import BaseBadge from '../src/components/BaseBadge.vue';
-import { userEvent, within } from '@storybook/testing-library';
+import { within } from 'storybook/test';
 
 export default {
     title: 'Components/BaseBadge',
@@ -61,7 +61,7 @@ export const Dismissible = (() => {
             class: 'px-4 py-1 bg-red-800 text-white leading-4',
             _spy: spy,
         },
-        play: async ({ canvasElement, args }) => {
+        play: async ({ canvasElement, args, userEvent }) => {
             const canvas = within(canvasElement);
             const button = canvas.getByRole('button');
 

@@ -1,5 +1,5 @@
 import BaseButton from '../src/components/BaseButton.vue';
-import { userEvent, within } from '@storybook/testing-library';
+import { within } from 'storybook/test';
 
 export default {
     title: 'Components/BaseButton',
@@ -23,7 +23,7 @@ const baseArgs = {
 
 
 // Play function for enabled buttons
-const testProcessClickEnabled = async ({ canvasElement, args }) => {
+const testProcessClickEnabled = async ({ canvasElement, args, userEvent }) => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
 
@@ -113,7 +113,7 @@ export const Disabled = (() => {
             callback: fn,
             _spy: spy,
         },
-        play: async ({ canvasElement, args }) => {
+        play: async ({ canvasElement, args, userEvent }) => {
             const canvas = within(canvasElement);
             const button = canvas.getByRole('button');
 

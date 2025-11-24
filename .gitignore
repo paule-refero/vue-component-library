@@ -16,3 +16,8 @@ yarn-error.log
 .composer
 .cache
 .vscode
+.DS_Store
+/dist
+/coverage
+.storybook-out
+CLAUDE.md
