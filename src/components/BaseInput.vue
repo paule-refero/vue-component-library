@@ -3,6 +3,7 @@
         :id="id"
         :aria-describedby="id"
         :aria-invalid="error"
+        :aria-label="id"
         :autocomplete="type === 'password' ? 'off' : 'on'"
         :disabled="disabled"
         :name="id"

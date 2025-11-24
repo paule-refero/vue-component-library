@@ -29,7 +29,7 @@
 
 <script setup>
 import { computed } from 'vue';
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from '@/utils/fontAwesomeIcons';
 import BaseButton from "@components/BaseButton.vue";
 
 const props = defineProps({

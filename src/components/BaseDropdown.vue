@@ -44,7 +44,7 @@
 
 <script setup>
 import { computed, ref, watch } from 'vue';
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from '@/utils/fontAwesomeIcons';
 import { vClickOutside } from '@/utils/clickOutside';
 import SlideDownUp from '@/transitions/SlideDownUp.vue';
 

@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from '@/utils/fontAwesomeIcons';
 
 const props = defineProps({
     callback: {

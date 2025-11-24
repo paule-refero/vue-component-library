@@ -2,14 +2,23 @@ import { FontAwesomeIcon, FontAwesomeLayers } from '@/utils/fontAwesomeIcons';
 import BaseButton from '@components/BaseButton.vue';
 import BaseCard from '@components/BaseCard.vue';
 import BaseBadge from '@components/BaseBadge.vue';
+import BaseInput from '@components/BaseInput.vue';
+import BaseSelect from '@components/BaseSelect.vue';
+import BaseTextarea from '@components/BaseTextarea.vue';
+import BaseFormField from '@components/BaseFormField.vue';
+import BasePasswordField from '@components/BasePasswordField.vue';
 
-// Components to register globally
 const components = {
     FontAwesomeIcon,
     FontAwesomeLayers,
     BaseBadge,
     BaseButton,
     BaseCard,
+    BaseInput,
+    BaseSelect,
+    BaseTextarea,
+    BaseFormField,
+    BasePasswordField,
 }
 
 const install = (app) => {
@@ -19,23 +28,25 @@ const install = (app) => {
 
     install.installed = true;
 
-    // Register all components globally
     Object.entries(components).forEach(([name, component]) => {
         app.component(name, component);
     })
 }
 
-// Allow both `app.use(Library)` and individual imports
 export default {
     install,
     ...components,
 }
 
-// Named exports for individual usage
 export {
     FontAwesomeIcon,
     FontAwesomeLayers,
     BaseBadge,
     BaseButton,
     BaseCard,
+    BaseInput,
+    BaseSelect,
+    BaseTextarea,
+    BaseFormField,
+    BasePasswordField,
 }

@@ -5,6 +5,7 @@
             :id="id"
             :aria-describedby="id"
             :aria-invalid="error"
+            :aria-label="id"
             :placeholder="placeholder"
             :value="modelValue"
             :type="revealPassword ? 'text' : 'password'"
@@ -26,6 +27,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import { FontAwesomeIcon } from '@/utils/fontAwesomeIcons';
 
 defineOptions({
     inheritAttrs: false,
