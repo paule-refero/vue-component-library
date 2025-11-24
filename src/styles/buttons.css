@@ -1,0 +1,102 @@
+@reference "tailwindcss";
+@layer components {
+    .btn {
+        @apply block rounded cursor-pointer font-medium focus:shadow-inner hover:shadow-inner active:shadow-inner;
+
+        &.btn-xs {
+            @apply px-1 py-0.5 text-xs;
+        }
+
+        &.btn-sm {
+            @apply px-2 py-1 text-sm;
+        }
+
+        &.btn-md {
+            @apply px-4 py-2;
+        }
+
+        &.btn-lg {
+            @apply px-5 py-2.5 text-lg;
+        }
+
+        &.btn-outline {
+            @apply bg-transparent!;
+        }
+
+        &.btn-disabled {
+            @apply opacity-30! shadow-none! cursor-default!;
+        }
+
+        &.btn-primary {
+            @apply bg-blue-600 hover:bg-blue-800 focus:bg-blue-800 border-2 border-blue-600 hover:border-blue-800 focus:border-blue-800 text-white;
+
+            &.btn-outline {
+                @apply text-blue-600 hover:text-blue-800 focus:text-blue-800;
+            }
+
+            &:disabled, &.btn-disabled {
+                @apply opacity-30! shadow-none! cursor-default;
+            }
+        }
+
+        &.btn-secondary {
+            @apply bg-stone-600 hover:bg-stone-700 focus:bg-stone-700 border-2 border-stone-500 hover:border-stone-600 focus:border-stone-700 text-white;
+
+            &.btn-outline {
+                @apply text-stone-600 hover:text-stone-700 focus:text-stone-700;
+            }
+
+            &:disabled, &.btn-disabled {
+                @apply opacity-30! shadow-none! cursor-default!;
+            }
+        }
+
+        &.btn-warning {
+            @apply bg-yellow-700 hover:bg-yellow-800 focus:bg-yellow-800 border-2 border-yellow-700 hover:border-yellow-800 focus:border-yellow-800 text-white;
+
+            &.btn-outline {
+                @apply text-yellow-700 hover:text-yellow-800 focus:text-yellow-800;
+            }
+
+            &:disabled, &.btn-disabled {
+                @apply opacity-30! shadow-none! cursor-default!;
+            }
+        }
+
+        &.btn-danger {
+            @apply bg-red-600 hover:bg-red-700 focus:bg-red-700 border-2 border-red-500 hover:border-red-700 focus:border-red-700 text-white;
+
+            &.btn-outline {
+                @apply text-red-600 hover:text-red-700 focus:text-red-700;
+            }
+
+            &:disabled, &.btn-disabled {
+                @apply opacity-30! shadow-none! cursor-default!;
+            }
+        }
+
+        &.btn-success {
+            @apply bg-green-700 hover:bg-green-800 focus:bg-green-800 border-2 border-green-600 hover:border-green-700 focus:border-green-700 text-white;
+
+            &.btn-outline {
+                @apply text-green-700 hover:text-green-800 focus:text-green-700;
+            }
+
+            &:disabled, &.btn-disabled {
+                @apply opacity-30! shadow-none! cursor-default!;
+            }
+        }
+
+        &.btn-info {
+            @apply bg-fuchsia-700 hover:bg-fuchsia-800 focus:bg-fuchsia-800 border-2 border-fuchsia-600 hover:border-fuchsia-700 focus:border-fuchsia-700 text-white;
+
+            &.btn-outline {
+                @apply text-fuchsia-700 hover:text-fuchsia-800 focus:text-fuchsia-700;
+            }
+
+            &:disabled, &.btn-disabled {
+                @apply opacity-30! shadow-none! cursor-default!;
+            }
+        }
+    }
+}

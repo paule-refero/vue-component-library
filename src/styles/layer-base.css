@@ -1,0 +1,10 @@
+@reference "tailwindcss";
+@layer base {
+    body {
+        @apply antialiased h-screen font-sans bg-white dark:bg-stone-900 dark:text-white;
+    }
+
+    :root {
+        --dp-input-padding: 1rem 1rem;
+    }
+}
