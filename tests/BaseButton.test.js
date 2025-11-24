@@ -45,7 +45,7 @@ describe('BaseButton', () => {
     );
 
         expect(wrapper.find('.custom-processing').exists()).toBe(true);
-        expect(wrapper.find('span').classes()).toContain('opacity-0');
+        expect(wrapper.find('span.opacity-0').exists()).toBe(true);
     });
 
     it('disables when disabled prop is true', () => {

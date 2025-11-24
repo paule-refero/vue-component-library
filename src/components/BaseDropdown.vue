@@ -63,7 +63,7 @@ const props = defineProps({
     },
     triggerIcon: {
         type: String,
-        default: 'a-solid fa-angle-down',
+        default: 'fa-solid fa-angle-down',
     },
     triggerSize: {
         type: String,

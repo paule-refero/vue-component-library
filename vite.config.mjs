@@ -34,7 +34,6 @@ export default defineConfig({
     test: {
         globals: true,
         environment: "jsdom",
-        setupFilesAfterEnv: [resolve(__dirname, "./.storybook/vitest.setup.js")],
         coverage: {
             provider: "v8",
             reporter: ["text", "html"],
@@ -43,10 +42,17 @@ export default defineConfig({
             exclude: [
                 "node_modules/",
                 "stories/",
-                "tests/",
             ],
         },
         projects: [
+            {
+                extends: true,
+                test: {
+                    name: "unit",
+                    include: ["tests/**/*.test.js"],
+                    environment: "jsdom",
+                },
+            },
             {
                 extends: true,
                 plugins: [
