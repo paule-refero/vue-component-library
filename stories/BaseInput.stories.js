@@ -27,7 +27,10 @@ const baseArgs = {
 
 // Default story
 export const Default = {
-    args: baseArgs,
+    args: {
+        ...baseArgs,
+        id: 'Default'
+    },
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
         const input = canvas.getByRole('textbox');
@@ -41,6 +44,7 @@ export const Default = {
 export const TextInput = {
     args: {
         ...baseArgs,
+        id: 'Name',
         placeholder: 'Enter your name',
     },
     play: async ({ canvasElement }) => {
@@ -122,6 +126,7 @@ export const WithValue = {
 export const Disabled = {
     args: {
         ...baseArgs,
+        id: 'disabled-field',
         disabled: true,
         placeholder: 'This field is disabled',
     },
@@ -141,6 +146,7 @@ export const Disabled = {
 export const WithError = {
     args: {
         ...baseArgs,
+        id: 'with-error-field',
         error: true,
         placeholder: 'This field has an error',
     },
@@ -149,7 +155,7 @@ export const WithError = {
         const input = canvas.getByRole('textbox');
 
         expect(input).toHaveAttribute('aria-invalid', 'true');
-        expect(input).toHaveClass('!text-red-700', '!border-danger');
+        expect(input).toHaveClass('!text-red-700', '!border-red-600');
     },
 };
 
@@ -164,12 +170,13 @@ export const ReactiveVModel = {
         template: `
             <div>
                 <BaseInput v-bind="args" v-model="value" />
-                <p class="mt-2 text-sm text-secondary-600">Current value: <strong>{{ value || '(empty)' }}</strong></p>
+                <p class="mt-2 text-sm text-stone-600">Current value: <strong>{{ value || '(empty)' }}</strong></p>
             </div>
         `,
     }),
     args: {
         ...baseArgs,
+        id: 'reactive-field',
         placeholder: 'Type to see reactive value',
     },
 };
@@ -178,6 +185,7 @@ export const ReactiveVModel = {
 export const NumericValue = {
     args: {
         ...baseArgs,
+        id: 'numeric-field',
         modelValue: 12345,
         placeholder: 'Numeric input',
     },
@@ -193,6 +201,7 @@ export const NumericValue = {
 export const LongPlaceholder = {
     args: {
         ...baseArgs,
+        id: 'long-placeholder',
         placeholder: 'This is a very long placeholder text to demonstrate how it looks in the input field',
     },
 };

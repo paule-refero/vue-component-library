@@ -12,7 +12,7 @@ describe('BaseLink', () => {
             slots,
             global: {
                 stubs: {
-                    'router-link': {
+                    RouterLink: {
                         template: '<a :to="to" :title="title"><slot /></a>',
                         props: ['to', 'title'],
                     },

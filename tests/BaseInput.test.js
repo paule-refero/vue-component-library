@@ -65,7 +65,7 @@ describe('BaseInput', () => {
         const input = wrapper.find('input');
 
         expect(input.classes()).toContain('!text-red-700');
-        expect(input.classes()).toContain('!border-danger');
+        expect(input.classes()).toContain('!border-red-600');
     });
 
     it('sets aria-invalid when error is true', () => {

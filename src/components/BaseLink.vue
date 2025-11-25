@@ -1,12 +1,12 @@
 <template>
-    <router-link
+    <RouterLink
         :to="to"
         :title="title"
         exact-path
-        class="text-blue-700 dark:text-stone-100 hover:text-blue-800 dark:hover:text-stone-300 focus:text-blue-800 dark:focus:text-stone-400 hover:underline focus:underline"
+        class="text-blue-700 hover:text-blue-800 focus:text-blue-800 hover:underline focus:underline cursor-pointer"
     >
         <slot />
-    </router-link>
+    </RouterLink>
 </template>
 
 <script setup>

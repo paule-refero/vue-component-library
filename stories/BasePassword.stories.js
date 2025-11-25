@@ -1,6 +1,6 @@
-import BasePasswordField from "../src/components/BasePasswordField.vue";
-import { within, expect, userEvent } from "storybook/test";
 import { ref } from 'vue';
+import { within, expect, userEvent } from "storybook/test";
+import BasePasswordField from "../src/components/BasePasswordField.vue";
 
 export default {
     title: "Components/BasePasswordField",
@@ -21,7 +21,10 @@ const baseArgs = {
 
 // Default story
 export const Default = {
-    args: baseArgs,
+    args: {
+        ...baseArgs,
+        id: 'default-password',
+    },
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
         const input = canvasElement.querySelector('input[type="password"]');
@@ -36,7 +39,10 @@ export const Default = {
 
 // With Password Reveal
 export const PasswordReveal = {
-    args: baseArgs,
+    args: {
+        ...baseArgs,
+        id: 'show-password',
+    },
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
         const input = canvasElement.querySelector('input');
@@ -59,6 +65,7 @@ export const PasswordReveal = {
 export const WithValue = {
     args: {
         ...baseArgs,
+        id: 'with-value-field',
         modelValue: 'secretPassword123',
     },
     play: async ({ canvasElement }) => {
@@ -73,6 +80,7 @@ export const WithValue = {
 export const UserTyping = {
     args: {
         ...baseArgs,
+        id: 'user-input-field',
         placeholder: 'Create a strong password',
     },
     play: async ({ canvasElement }) => {
@@ -88,6 +96,7 @@ export const UserTyping = {
 export const WithError = {
     args: {
         ...baseArgs,
+        id: 'with-error-field',
         error: true,
         placeholder: 'Password is required',
         modelValue: '',
@@ -105,6 +114,7 @@ export const WithError = {
 export const RevealWithValue = {
     args: {
         ...baseArgs,
+        id: 'with-reveal-field',
         modelValue: 'HiddenPassword',
         placeholder: 'Your password',
     },
@@ -146,6 +156,7 @@ export const ReactiveVModel = {
     }),
     args: {
         ...baseArgs,
+        id: 'reactive-field',
         placeholder: 'Type to see reactive updates',
     },
 };
@@ -154,6 +165,7 @@ export const ReactiveVModel = {
 export const MultipleToggles = {
     args: {
         ...baseArgs,
+        id: 'multiple-toggles-field',
         modelValue: 'test123',
     },
     play: async ({ canvasElement }) => {
@@ -197,6 +209,7 @@ export const AccessibilityFeatures = {
 export const LongPassword = {
     args: {
         ...baseArgs,
+        id: 'long-password-field',
         modelValue: 'ThisIsAVeryLongPasswordWithManyCharacters1234567890!@#$%^&*()',
         placeholder: 'Long password example',
     },
@@ -206,6 +219,7 @@ export const LongPassword = {
 export const EmptyToFilled = {
     args: {
         ...baseArgs,
+        id: 'empty-field',
         placeholder: 'Enter your password',
     },
     play: async ({ canvasElement }) => {
@@ -223,6 +237,7 @@ export const EmptyToFilled = {
 export const ErrorAndReveal = {
     args: {
         ...baseArgs,
+        id: 'error-field',
         error: true,
         modelValue: 'weak',
         placeholder: 'Password too short',

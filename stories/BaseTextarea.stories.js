@@ -89,7 +89,7 @@ export const WithError = {
         const textarea = canvasElement.querySelector('textarea');
 
         expect(textarea).toHaveAttribute('aria-invalid', 'true');
-        expect(textarea).toHaveClass('!text-red-700', '!border-danger');
+        expect(textarea).toHaveClass('!text-red-700', '!border-red-600');
     },
 };
 
@@ -149,7 +149,7 @@ export const CommentBox = {
         },
         template: `
             <div class="max-w-2xl">
-                <label for="comment" class="block mb-2 font-medium">Leave a comment</label>
+                <label for="comment" class="text-stone-600 block mb-2 font-medium">Leave a comment</label>
                 <BaseTextarea
                     id="comment"
                     placeholder="Share your thoughts..."
@@ -179,10 +179,10 @@ export const FeedbackForm = {
         },
         template: `
             <div class="max-w-lg p-4 bg-white rounded shadow">
-                <h3 class="text-lg font-semibold mb-4">Send Feedback</h3>
+                <h3 class="text-stone-700 text-lg font-semibold mb-4">Send Feedback</h3>
                 <div class="space-y-4">
                     <div>
-                        <label for="feedback" class="block mb-2 font-medium">Your Feedback</label>
+                        <label for="feedback" class="text-stone-600 block mb-2 font-medium">Your Feedback</label>
                         <BaseTextarea
                             id="feedback"
                             v-model="feedback"
@@ -190,10 +190,10 @@ export const FeedbackForm = {
                         />
                     </div>
                     <div class="flex gap-2">
-                        <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                        <button class="px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800">
                             Submit
                         </button>
-                        <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                        <button class="px-4 py-2 bg-gray-600 text-gray-200 rounded hover:bg-gray-700">
                             Cancel
                         </button>
                     </div>
@@ -213,7 +213,7 @@ export const CodeEditorStyle = {
         },
         template: `
             <div class="max-w-2xl">
-                <label for="code" class="block mb-2 font-medium font-mono">Code Editor</label>
+                <label for="code" class="text-stone-600 block mb-2 font-medium font-mono">Code Editor</label>
                 <BaseTextarea
                     id="code"
                     v-model="code"

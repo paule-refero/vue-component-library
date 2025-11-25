@@ -3,6 +3,7 @@ import BaseButton from '@components/BaseButton.vue';
 import BaseCard from '@components/BaseCard.vue';
 import BaseBadge from '@components/BaseBadge.vue';
 import BaseInput from '@components/BaseInput.vue';
+import BaseLink from '@components/BaseLink.vue';
 import BaseSelect from '@components/BaseSelect.vue';
 import BaseTextarea from '@components/BaseTextarea.vue';
 import BaseFormField from '@components/BaseFormField.vue';
@@ -15,6 +16,7 @@ const components = {
     BaseButton,
     BaseCard,
     BaseInput,
+    BaseLink,
     BaseSelect,
     BaseTextarea,
     BaseFormField,
@@ -45,6 +47,7 @@ export {
     BaseButton,
     BaseCard,
     BaseInput,
+    BaseLink,
     BaseSelect,
     BaseTextarea,
     BaseFormField,

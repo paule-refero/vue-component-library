@@ -17,10 +17,11 @@ export default defineConfig({
             fileName: format => `vue3-component-library.${format}.js`
         },
         rollupOptions: {
-            external: ["vue"],
+            external: ["vue", "vue-router"],
             output: {
                 globals: {
-                    vue: "Vue"
+                    vue: "Vue",
+                    "vue-router": "VueRouter"
                 }
             }
         }

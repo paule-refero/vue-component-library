@@ -75,7 +75,7 @@ describe('BaseTextarea', () => {
         });
 
         expect(wrapper.find('textarea').classes()).toContain('!text-red-700');
-        expect(wrapper.find('textarea').classes()).toContain('!border-danger');
+        expect(wrapper.find('textarea').classes()).toContain('!border-red-600');
     });
 
     it('does not apply error styling when error is false', () => {
