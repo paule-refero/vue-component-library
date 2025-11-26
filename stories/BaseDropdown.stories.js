@@ -2,7 +2,7 @@ import BaseDropdown from "../src/components/BaseDropdown.vue";
 import { within, userEvent } from "storybook/test";
 
 export default {
-    title: "Components/BaseDropdown",
+    title: "Atoms/BaseDropdown",
     component: BaseDropdown,
     tags: ["autodocs"],
 };

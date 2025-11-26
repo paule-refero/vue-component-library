@@ -3,7 +3,7 @@ import BaseInput from "../src/components/BaseInput.vue";
 import { within, expect } from "storybook/test";
 
 export default {
-    title: "Components/BaseFormField",
+    title: "Atoms/BaseFormField",
     component: BaseFormField,
     tags: ["autodocs"],
     argTypes: {

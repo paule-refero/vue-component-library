@@ -3,7 +3,7 @@ import { within, expect, userEvent } from "storybook/test";
 import { ref } from 'vue';
 
 export default {
-    title: "Components/BaseTextarea",
+    title: "Atoms/BaseTextarea",
     component: BaseTextarea,
     tags: ["autodocs"],
 };

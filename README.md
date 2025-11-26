@@ -1,4 +1,7 @@
 ## Project Overview:
+
+Vue 3 component library for use in new applications
+
 - Vue 3 components in src/components/
 - Storybook for component documentation (port 6006)
 - Playwright for e2e testing
@@ -76,10 +79,17 @@ import { BaseButton, BaseInput, createAppRouter } from 'vue3-component-library';
 ```
 
 ### Available Components:
-- BaseButton, BaseBadge, BaseCard, BaseDropdown
-- BaseInput, BasePasswordField, BaseTextarea, BaseFormField
-- BaseSelect, BaseLink
-- SlideDownUp transition
+- BaseButton, 
+- BaseBadge, 
+- BaseCard, 
+- BaseDropdown
+- BaseInput, 
+- BasePasswordField, 
+- BaseTextarea, 
+- BaseFormField
+- BaseSelect, 
+- BaseLink
+- SlideDownUp (Transition)
 
 ### Available Scripts:
 - npm run storybook - Start Storybook dev server
@@ -87,4 +97,5 @@ import { BaseButton, BaseInput, createAppRouter } from 'vue3-component-library';
 - npm run build - Build the library
 - npm run test - Run tests
 - npm run test:ui - Interactive test UI
+- npm run test:clean
 - npm run lint - Fix linting issues

@@ -2,7 +2,7 @@ import BaseButton from '../src/components/BaseButton.vue';
 import { within } from 'storybook/test';
 
 export default {
-    title: 'Components/BaseButton',
+    title: 'Atoms/BaseButton',
     component: BaseButton,
     tags: ['autodocs'],
     argTypes: { processClick: { action: 'clicked' }, },

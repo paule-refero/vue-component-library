@@ -2,7 +2,7 @@ import BaseCard from '../src/components/BaseCard.vue';
 import { within } from 'storybook/test';
 
 export default {
-    title: 'Components/BaseCard',
+    title: 'Atoms/BaseCard',
     component: BaseCard,
     tags: ['autodocs'],
 };

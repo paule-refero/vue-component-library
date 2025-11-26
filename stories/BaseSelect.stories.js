@@ -3,7 +3,7 @@ import { within, expect, userEvent } from "storybook/test";
 import { ref } from 'vue';
 
 export default {
-    title: "Components/BaseSelect",
+    title: "Atoms/BaseSelect",
     component: BaseSelect,
     tags: ["autodocs"],
 };

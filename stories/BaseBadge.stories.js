@@ -2,7 +2,7 @@ import BaseBadge from '../src/components/BaseBadge.vue';
 import { within } from 'storybook/test';
 
 export default {
-    title: 'Components/BaseBadge',
+    title: 'Atoms/BaseBadge',
     component: BaseBadge,
     tags: ['autodocs'],
 };

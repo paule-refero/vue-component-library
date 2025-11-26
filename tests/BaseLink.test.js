@@ -13,7 +13,7 @@ describe('BaseLink', () => {
             global: {
                 stubs: {
                     RouterLink: {
-                        template: '<a :to="to" :title="title"><slot /></a>',
+                        template: '<a v-bind="$attrs"><slot /></a>',
                         props: ['to', 'title'],
                     },
                 },

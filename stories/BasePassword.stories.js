@@ -3,7 +3,7 @@ import { within, expect, userEvent } from "storybook/test";
 import BasePasswordField from "../src/components/BasePasswordField.vue";
 
 export default {
-    title: "Components/BasePasswordField",
+    title: "Atoms/BasePasswordField",
     component: BasePasswordField,
     tags: ["autodocs"],
     argTypes: {

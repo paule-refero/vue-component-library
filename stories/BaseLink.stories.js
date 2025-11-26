@@ -2,7 +2,7 @@ import BaseLink from "../src/components/BaseLink.vue";
 import { within, expect } from "storybook/test";
 
 export default {
-    title: "Components/BaseLink",
+    title: "Atoms/BaseLink",
     component: BaseLink,
     tags: ["autodocs"],
 };
