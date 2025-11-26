@@ -71,7 +71,7 @@ describe('BaseLink', () => {
         const wrapper = mount(BaseLink, {
             global: {
                 stubs: {
-                    'router-link': {
+                    RouterLink: {
                         template: '<a><slot /></a>',
                         props: ['to', 'title'],
                     },
@@ -86,7 +86,7 @@ describe('BaseLink', () => {
         const wrapper = mount(BaseLink, {
             global: {
                 stubs: {
-                    'router-link': {
+                    RouterLink: {
                         template: '<a><slot /></a>',
                         props: ['to', 'title'],
                     },

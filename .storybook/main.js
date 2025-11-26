@@ -21,6 +21,7 @@ const config = {
                 include: [
                     ...(config.optimizeDeps?.include ?? []),
                     "vue",
+                    "vue-router",
                 ],
             },
         };
