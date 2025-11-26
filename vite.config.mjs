@@ -10,7 +10,14 @@ export default defineConfig({
         vue({
             template: {
                 compilerOptions: {
-                    whitespace: 'preserve'
+                    whitespace: 'preserve',
+                    onWarn: (warning) => {
+                        // Suppress the decodeEntities warning in non-browser builds
+                        if (warning.message?.includes('decodeEntities')) {
+                            return;
+                        }
+                        console.warn(warning);
+                    },
                 }
             }
         }),
@@ -41,6 +48,12 @@ export default defineConfig({
     test: {
         globals: true,
         environment: "jsdom",
+        onConsoleLog(log) {
+            // Suppress Vue compiler decodeEntities warnings
+            if (log.includes('decodeEntities option is passed but will be ignored in non-browser builds')) {
+                return false;
+            }
+        },
         coverage: {
             provider: "v8",
             reporter: ["text", "html"],
