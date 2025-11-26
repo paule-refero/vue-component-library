@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col w-full mb-3 md:mb-4">
         <label
-            class="block mb-2 font-sans dark:text-stone-200 text-sm md:text-base"
+            class="block mb-2 font-sans text-sm"
             :class="error ? 'text-red-600' : 'text-stone-900'"
             :for="forLabel"
         >

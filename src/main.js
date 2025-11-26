@@ -8,6 +8,7 @@ import BaseSelect from '@components/BaseSelect.vue';
 import BaseTextarea from '@components/BaseTextarea.vue';
 import BaseFormField from '@components/BaseFormField.vue';
 import BasePasswordField from '@components/BasePasswordField.vue';
+import { createAppRouter } from './router/index.js';
 
 const components = {
     FontAwesomeIcon,
@@ -23,7 +24,7 @@ const components = {
     BasePasswordField,
 }
 
-const install = (app) => {
+const install = (app, options = {}) => {
     if (install.installed) {
         return;
     }
@@ -33,6 +34,11 @@ const install = (app) => {
     Object.entries(components).forEach(([name, component]) => {
         app.component(name, component);
     })
+
+    // Install Vue Router if router option is provided
+    if (options.router) {
+        app.use(options.router);
+    }
 }
 
 export default {
@@ -52,4 +58,5 @@ export {
     BaseTextarea,
     BaseFormField,
     BasePasswordField,
+    createAppRouter,
 }

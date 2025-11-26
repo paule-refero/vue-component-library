@@ -24,23 +24,27 @@ export const Default = {
     render: (args) => ({
         components: { BaseFormField, BaseInput },
         setup() {
-            return { args };
+            const uniqueId = `default-input-${Math.random().toString(36).substr(2, 9)}`;
+            return { args, uniqueId };
         },
         template: `
-            <BaseFormField v-bind="args">
+            <BaseFormField :forLabel="uniqueId" :label="args.label">
                 <BaseInput
-                    :id="args.forLabel"
+                    :id="uniqueId"
                     placeholder="Enter text..."
                     modelValue=""
                 />
             </BaseFormField>
         `,
     }),
-    args: baseArgs,
+    args: {
+        ...baseArgs,
+        label: 'Default Label',
+    },
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
-        expect(canvas.getByText('Field Label')).toBeInTheDocument();
+        expect(canvas.getByText('Default Label')).toBeInTheDocument();
         expect(canvas.getByPlaceholderText('Enter text...')).toBeInTheDocument();
     },
 };
@@ -55,7 +59,7 @@ export const Required = {
         template: `
             <BaseFormField v-bind="args">
                 <BaseInput
-                    :id="args.forLabel"
+                    :id="'required-field'"
                     placeholder="Enter required field..."
                     modelValue=""
                 />
@@ -64,6 +68,7 @@ export const Required = {
     }),
     args: {
         ...baseArgs,
+        forLabel: 'required-field',
         label: 'Username',
         required: true,
     },
@@ -94,6 +99,7 @@ export const WithLabelInfo = {
     }),
     args: {
         ...baseArgs,
+        forLabel: 'nickname-field',
         label: 'Nickname',
         labelInfo: '(optional)',
     },
@@ -124,6 +130,7 @@ export const WithError = {
     }),
     args: {
         ...baseArgs,
+        forLabel: 'email-field',
         label: 'Email',
         error: 'Please enter a valid email address',
         required: true,
@@ -147,7 +154,7 @@ export const CompleteExample = {
         template: `
             <BaseFormField v-bind="args">
                 <BaseInput
-                    :id="args.forLabel"
+                    id="password-field"
                     placeholder="Enter your password..."
                     type="password"
                     modelValue=""
@@ -227,9 +234,9 @@ export const WithTextarea = {
         template: `
             <BaseFormField v-bind="args">
                 <textarea
-                    :id="args.forLabel"
+                    :id="'textarea'"
                     placeholder="Enter your message..."
-                    class="w-full p-3 border-2 border-stone-500 rounded"
+                    class="w-full p-3 border-2 border-stone-500 text-stone-700 rounded"
                     rows="4"
                 ></textarea>
             </BaseFormField>
@@ -237,6 +244,7 @@ export const WithTextarea = {
     }),
     args: {
         ...baseArgs,
+        forLabel: 'textarea',
         label: 'Message',
         labelInfo: '(maximum 500 characters)',
     },

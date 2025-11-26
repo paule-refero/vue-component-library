@@ -7,7 +7,13 @@ import { resolve } from 'node:path';
 
 export default defineConfig({
     plugins: [
-        vue(),
+        vue({
+            template: {
+                compilerOptions: {
+                    whitespace: 'preserve'
+                }
+            }
+        }),
         tailwindcss(),
     ],
     build: {

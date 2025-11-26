@@ -21,10 +21,15 @@ const baseArgs = {
 
 // Default story
 export const Default = {
-    args: {
-        ...baseArgs,
-        id: 'default-password',
-    },
+    render: (args) => ({
+        components: { BasePasswordField },
+        setup() {
+            const uniqueId = `default-password-${Math.random().toString(36).substr(2, 9)}`;
+            return { args: { ...args, id: uniqueId } };
+        },
+        template: `<BasePasswordField v-bind="args" />`,
+    }),
+    args: baseArgs,
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
         const input = canvasElement.querySelector('input[type="password"]');
@@ -106,7 +111,7 @@ export const WithError = {
         const input = canvasElement.querySelector('input');
 
         expect(input).toHaveAttribute('aria-invalid', 'true');
-        expect(input).toHaveClass('!text-red-700', '!border-danger');
+        expect(input).toHaveClass('!text-red-700', '!border-red-600');
     },
 };
 
@@ -248,7 +253,7 @@ export const ErrorAndReveal = {
         const button = canvas.getByRole('button');
 
         // Has error styling
-        expect(input).toHaveClass('!text-red-700', '!border-danger');
+        expect(input).toHaveClass('!text-red-700', '!border-red-600');
 
         // Can still toggle visibility
         await userEvent.click(button);

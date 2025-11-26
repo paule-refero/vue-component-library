@@ -164,7 +164,6 @@ describe('BaseFormField', () => {
 
         const label = wrapper.find('label');
         expect(label.classes()).toContain('text-sm');
-        expect(label.classes()).toContain('md:text-base');
     });
 
     it('handles empty label', () => {

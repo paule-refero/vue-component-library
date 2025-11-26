@@ -10,7 +10,7 @@
             :value="modelValue"
             :type="revealPassword ? 'text' : 'password'"
             class="w-full px-3 py-2.5 border-2 border-stone-500 leading-6 rounded bg-white text-stone-900 focus:ring-3 focus:ring-yellow-600 focus:outline-none"
-            :class="{'!text-red-700 !border-danger':error}"
+            :class="{'!text-red-700 !border-red-600':error}"
             @input="$emit('update:modelValue', $event.target.value)"
         >
         <button

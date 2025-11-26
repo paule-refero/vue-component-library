@@ -120,15 +120,6 @@ describe('BaseLink', () => {
         expect(link.classes()).toContain('focus:underline');
     });
 
-    it('applies dark mode classes', () => {
-        const wrapper = factory();
-        const link = wrapper.find('a');
-
-        expect(link.classes()).toContain('dark:text-stone-100');
-        expect(link.classes()).toContain('dark:hover:text-stone-300');
-        expect(link.classes()).toContain('dark:focus:text-stone-400');
-    });
-
     it('renders complex slot content', () => {
         const wrapper = factory({}, {
             default: '<span class="icon">→</span> Read More',

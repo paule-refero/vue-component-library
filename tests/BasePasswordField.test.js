@@ -101,7 +101,7 @@ describe('BasePasswordField', () => {
         const input = wrapper.find('input');
 
         expect(input.classes()).toContain('!text-red-700');
-        expect(input.classes()).toContain('!border-danger');
+        expect(input.classes()).toContain('!border-red-600');
     });
 
     it('sets aria-invalid when error is true', () => {
@@ -169,7 +169,7 @@ describe('BasePasswordField', () => {
         const input = wrapper.find('input');
 
         expect(input.classes()).not.toContain('!text-red-700');
-        expect(input.classes()).not.toContain('!border-danger');
+        expect(input.classes()).not.toContain('!border-red-600');
     });
 
     it('passes through additional attributes with v-bind', async () => {

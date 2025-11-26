@@ -141,7 +141,7 @@ describe('BaseInput', () => {
         const input = wrapper.find('input');
 
         expect(input.classes()).not.toContain('!text-red-700');
-        expect(input.classes()).not.toContain('!border-danger');
+        expect(input.classes()).not.toContain('!border-red-600');
     });
 
     it('does not apply disabled styling when not disabled', () => {

@@ -84,7 +84,7 @@ describe('BaseTextarea', () => {
         });
 
         expect(wrapper.find('textarea').classes()).not.toContain('!text-red-700');
-        expect(wrapper.find('textarea').classes()).not.toContain('!border-danger');
+        expect(wrapper.find('textarea').classes()).not.toContain('!border-red-600');
     });
 
     it('sets aria-invalid when error is true', () => {
